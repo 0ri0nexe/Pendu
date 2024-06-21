@@ -1,0 +1,37 @@
+:root {
+	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+
+	color: #5c3806;
+	background-image: url("../assets/background.png");
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+.container {
+	margin: 0;
+	padding-top: 5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.fade {
+	opacity: 0;
+	transition:
+		opacity 2s;
+}

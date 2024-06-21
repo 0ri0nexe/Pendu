@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/src/css/solo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solo</title>
+  <script type="module" src="../scripts/solo.ts" defer></script>
+</head>
+<body class="hidden">
+    <img id="back" class="back" src="../assets/back_arrow.png" alt="" href="../../index.html">
+    <div id="main" class="row">
+        <div id="guess_zone" class="container">
+            <div id="letters" class="row"></div>
+            <input type="text" placeholder="Proposition" class="guess">
+        </div>
+        <div class="container">
+            <div id="coffee" class="row">
+                <img src="../assets/coffee_pot.png" class="coffee_container">
+                <img src="../assets/empty_coffee_cup.png" class="cup">
+                <div id="coffee_in_cup" class="coffe"></div>
+            </div>
+            <div id="wrong_letters" class="row"></div>
+        </div>
+    </div>
+</body>

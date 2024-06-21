@@ -1,0 +1,68 @@
+@import url("./base.css");
+
+.back {
+    height: 50px;
+    width: auto;
+
+    position: absolute;
+    top: 17px;
+    left: 17px;
+}
+
+.fadeout {
+    opacity: 1;
+    transition:
+        opacity 1s linear;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.to_guess {
+    font-size: 10vh;
+    padding-left: 10px;
+}
+
+.coffee_container {
+    height: 40vh;
+    transform: scaleX(-1)
+}
+
+.cup {
+    height: 40vh;
+    width: auto;
+
+    position: relative;
+    left: 10vh
+}
+
+.guess {
+    background-color: rgb(65, 31, 4);
+    font-size: 30px;
+    color: aliceblue;
+
+    position: relative;
+    left: 11vh;
+    top: 15vh;
+}
+
+#guess_zone {
+    position: relative;
+    top: 10vh
+}
+
+#coffee {
+    position: relative;
+    top: 20vh;
+    left: 30vh;
+}
+
+#letters {
+    position: relative;
+    left: 10vh;
+}
+
+#main {
+    width: max-content
+}
