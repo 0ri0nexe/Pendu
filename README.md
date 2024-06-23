@@ -21,6 +21,7 @@ Si c'était pour faire des langage web, pourquoi ne pas avoir fait un site ? Eff
 
 ## Compiler
 Si vous voulez compiler le projet vous même, il faut:
-- installer rust ainsi que node js.
-- Clonez ensuite le projet.
-- A la racine du projet, exécutez : `npm run tauri dev` pour une session de dev, `npm run tauri build` pour build un exécutable et les installateurs. 
+- Installer rust ainsi que node js.
+- Cloner le projet.
+- A la racine du projet, exécuter : `npm install`
+- Et finalement `npm run tauri dev` pour une session de dev, `npm run tauri build` pour build un exécutable et les installateurs. 
