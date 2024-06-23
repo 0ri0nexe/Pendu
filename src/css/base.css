@@ -14,6 +14,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+
+	overflow: hidden;
+	user-select: none;
 }
 
 .container {
@@ -34,4 +37,9 @@
 	opacity: 0;
 	transition:
 		opacity 2s;
+}
+
+a {
+	color: #5c3806;
+	text-decoration: inherit;
 }

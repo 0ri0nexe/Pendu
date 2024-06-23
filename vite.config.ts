@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
@@ -12,9 +13,23 @@ export default defineConfig(async () => ({
     port: 1420,
     strictPort: true,
     watch: {
-      paths: ["./src/**"],
+      paths: [
+        "./src/**",
+        "./src/html/**"
+      ],
       // 3. tell vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],
     },
   },
+  build: {
+    target: "ES2022",
+    rollupOptions: {
+      input: {
+        solo: resolve(__dirname, 'src/html/solo.html'),
+        loose: resolve(__dirname, 'src/html/loose.html'),
+        win: resolve(__dirname, 'src/html/win.html'),
+        index: "./index.html",
+      },
+    }
+  }
 }));

@@ -19,50 +19,168 @@
     opacity: 0;
 }
 
+.letter {
+    font-size: 45px;
+    padding-right: 5px;
+}
+
 .to_guess {
     font-size: 10vh;
     padding-left: 10px;
 }
 
-.coffee_container {
+#coffee_pot {
     height: 40vh;
-    transform: scaleX(-1)
+    transform: scaleX(-1);
+
+    position: relative;
+    left: 30vh;
+}
+
+@keyframes pour {
+    0% {
+        left: 30vh;
+        bottom: 0;
+    }
+
+    50% {
+        left: 47vh;
+        bottom: 25vh;
+        rotate: 20deg;
+    }
+
+    100% {
+        left: 64vh;
+        rotate: 60deg;
+        bottom: 25vh;
+    }
+}
+
+@keyframes curve {
+    0% {
+        bottom: 0;
+    }
+
+    70% {
+        bottom: 70vh;
+    }
+
+    100% {
+        bottom: 50vh;
+    }
+}
+
+.pour_reversed,
+.pour {
+    animation-name: pour;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.pour_reversed {
+    animation-iteration-count: 3;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
 }
 
 .cup {
     height: 40vh;
     width: auto;
+    z-index: 1;
 
-    position: relative;
-    left: 10vh
+    position: absolute;
+    right: 370px;
 }
 
 .guess {
     background-color: rgb(65, 31, 4);
     font-size: 30px;
     color: aliceblue;
+    max-width: 60vh;
 
     position: relative;
     left: 11vh;
-    top: 15vh;
+    top: 10vh;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.second_column {
+    position: relative;
 }
 
 #guess_zone {
-    position: relative;
-    top: 10vh
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #coffee {
     position: relative;
-    top: 20vh;
-    left: 30vh;
+    top: 30vh;
+    right: 0vh;
 }
 
 #letters {
+    justify-content: center;
+    /* font-size: 55px; */
     position: relative;
-    left: 10vh;
+    right: 10vh;
+    top: 10vh
 }
 
 #main {
-    width: max-content
+    width: 100%;
+}
+
+#wrong_letters {
+    justify-content: flex-start;
+    width: fit-content;
+
+    position: relative;
+    top: 44vh;
+}
+
+#wrong_label {
+    font-size: 45px;
+    position: relative;
+    top: 277px;
+    padding-right: 10px;
+}
+
+#coffee_in_cup {
+    background-color: rgb(99, 52, 1);
+    height: 0px;
+    width: 153px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 15%;
+    z-index: 0;
+
+    position: absolute;
+    top: 264px;
+    right: 455px;
+
+    transition: height 1s, top 1s;
+}
+
+#coffee_trail {
+    background-color: rgb(99, 52, 1);
+    height: 0px;
+    width: 10px;
+    border-top-right-radius: 70%;
+    z-index: 0;
+
+    position: absolute;
+    top: 20px;
+    right: 558px;
+
+    transition: height 1s, top 1s;
 }

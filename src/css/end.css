@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(99, 45, 1);
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+div {
+    color: aliceblue;
+    font-size: 100px;
+    position: relative;
+    top: 38vh;
+}
+
+.replay,
+.back {
+    height: 50px;
+    width: auto;
+
+    position: absolute;
+}
+
+.back {
+    top: 17px;
+    left: 17px;
+}
+
+.replay {
+    top: 60vh;
+    left: 87vh;
+}
